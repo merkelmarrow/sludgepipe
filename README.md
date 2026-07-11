@@ -4,16 +4,16 @@ This is a C telemetry decoder designed to be as badly written as humanly possibl
 
 #### Bad design
 
-- [ ] one main.c file mixing every responsibility
+- [x] one main.c file mixing every responsibility
 - [ ] massive switch statement with copy-pasted logic that is subtly out of sync
-- [ ] everything is a global variable
+- [x] everything is a global variable
 - [ ] configuration is editing a bunch of macros
-- [ ] no named constants
+- [x] magic numbers everywhere
 - [ ] make every function a void
 - [ ] exit(1) inside a helper function
 
 #### Memory & Buffers
-- [ ] not bounds-checking an input into a buffer
+- [x] not bounds-checking an input into a buffer
 - [ ] ring buffer with an off-by-one error
 - [ ] fields extracted by casting haphazardly
 - [ ] sprintf, strcpy, strcat
@@ -27,8 +27,8 @@ This is a C telemetry decoder designed to be as badly written as humanly possibl
 - [ ] bit shifting by greater than the width of the type
 - [ ] using an uninitialised struct as a testing input for "jitter"
 - [ ] packing a float using union type-punning in one place and int* cast in another
-- [ ] using %d for uint32_t, %ld for size_t
-- [ ] baking in little-endianness silently
+- [x] using %d for uint32_t, %ld for size_t
+- [x] baking in little-endianness silently
 
 #### Performance
 
@@ -50,7 +50,7 @@ This is a C telemetry decoder designed to be as badly written as humanly possibl
 
 - [ ] build.sh is two lines
 - [ ] debugging with commented out printfs
-- [ ] no tests
+- [x] no tests
 
 ## Goal
 
